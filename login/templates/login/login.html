@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block page_content %}
+
+<form id='' method='POST' action='{% url "user_page" %}'>
+  {% csrf_token %}
+
+  {{ form.as_p }}
+
+  <input type="submit" value="Render" id=''>
+
+</form>
+
+{% endblock page_content %}
